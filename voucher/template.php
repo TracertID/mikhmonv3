@@ -1,11 +1,28 @@
+						<?php
+
+if ($getsprice == "3000") {
+  $color = "#808000";
+} elseif ($getsprice == "5000") {
+  $color = "#00FF00";
+} elseif ($getsprice == "7000") {
+  $color = "#008000";
+} elseif ($getsprice == "10000") {
+  $color = "#00FFFF";
+} elseif ($getsprice == "15000") {
+  $color = "#008080";
+} elseif ($getsprice == "9000") {
+  $color = "#FFFF00";
+} else {
+  $color = "#FFFFFF";
+}
+?>
 
 <style>
-	.qrcode{
+.qrcode{
 		height:80px;
 		width:80px;
-	}
+}
 </style>
-
 <table class="voucher" style=" width: 220px;">
   <tbody>
 <!-- Logo Hotspotname -->
@@ -73,7 +90,7 @@
 <!-- /  -->
     <tr>
       <!-- Price  -->
-      <td colspan="2" style="border-top: 1px solid black;font-weight:bold; font-size:16px"><?= $validity; ?> <?= $timelimit; ?> <?= $datalimit; ?> <?= $price; ?></td>
+      <td colspan="2" style="border-top: 1px solid black;font-weight:bold; font-size:16px; background-color:<?= $color; ?>; -webkit-print-color-adjust: exact;"><?= $validity; ?> <?= $timelimit; ?> <?= $datalimit; ?> <?= $price; ?></td>
 <!-- /  -->
     </tr>
     <tr>
@@ -87,4 +104,4 @@
       </td>
     </tr>
   </tbody>
-</table>
+</table>	        	        	        
